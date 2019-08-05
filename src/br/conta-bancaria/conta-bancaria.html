@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Conta Bancaria Spec</title>
+	<script src="/node_modules/angular/angular.min.js"></script>
+	<script src="/releases/angular-input-masks-dependencies.js"></script>
+	<script src="/releases/angular-input-masks.br.js"></script>
+	<script>
+		angular.module('app', ['ui.utils.masks'])
+			.controller('ctrl', function ctrl($scope) {
+				$scope.initializedfieldBankAccount = '35244457640';
+			});
+	</script>
+</head>
+<body ng-app="app">
+<form name="form" ng-controller="ctrl">
+	<h2>ui-br-bank-account-mask</h2>
+	<input type="text" name="field7" ng-model="initializedfieldBankAccount" ui-br-bank-account-mask> <br>
+	<span ng-bind="initializedfieldBankAccount"></span> - {{form.field7.$error}}<br>
+	<input type="text" name="field8" ng-model="fieldBankAccount" ng-model-options="{allowInvalid:true}" ui-br-bank-account-mask> <br>
+	<span ng-bind="fieldBankAccount"></span> - {{form.field8.$error}}<br>
+</form>
+</body>
+</html>

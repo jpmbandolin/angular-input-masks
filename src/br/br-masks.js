@@ -10,6 +10,7 @@ var m = angular.module('ui.utils.masks.br', [])
 	.directive('uiBrNumeroBeneficioMask', require('./numero-beneficio/numero-beneficio'))
 	.directive('uiBrIeMask', require('./inscricao-estadual/ie'))
 	.directive('uiNfeAccessKeyMask', require('./nfe/nfe'))
-	.directive('uiBrPhoneNumberMask', require('./phone/br-phone'));
+	.directive('uiBrPhoneNumberMask', require('./phone/br-phone'))
+	.directive('uiBrBankAccountMask', require('./conta-bancaria/conta-bancaria'));
 
 module.exports = m.name;
